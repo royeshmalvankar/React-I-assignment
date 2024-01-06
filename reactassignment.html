@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+    </div>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js" ></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" ></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</body>
+</html>
+<script type="text/babel">
+    let con = document.getElementById("root")
+    let c = ReactDOM.createRoot(con)
+    let p ={
+        border:"2px solid black",
+        background:"rgb(255,228,196)",
+    }
+    let p1={
+        textAlign:"start",
+        display:"flex",
+        padding:"10px",
+        gap:"20px",
+        justifyContent:"center",
+        
+    }
+    let child1={
+        border:"2px solid black",
+        background:"red",
+        width:"100px",
+        height:"100px",
+        fontSize:"30px",
+        fontWeight:"bold"
+    }
+    let child2={
+        border:"2px solid black",
+        background:"yellow",
+        width:"100px",
+        height:"100px",
+        fontSize:"30px",
+        fontWeight:"bold"
+    }
+    let child3={
+        border:"2px solid black",
+        background:"green",
+        width:"100px",
+        height:"100px",
+        fontSize:"30px",
+        fontWeight:"bold"
+    }
+    let child4={
+        border:"2px solid black",
+        background:"purple",
+        width:"100px",
+        height:"100px",
+        fontSize:"30px",
+        fontWeight:"bold"
+    }
+    let element = React.createElement('div',{id:"parent",style:p},[
+    React.createElement('div',{style:{fontSize:"30px",fontWeight:"bold"}},"parent"), 
+    React.createElement('div',{style:p1},
+    [
+        React.createElement('div',{style:child1},'1'),
+        React.createElement('div',{style:child2},'2'),
+        React.createElement('div',{style:child3},'3'),
+        React.createElement('div',{style:child4},'4'),
+    ]) 
+])      
+    
+    c.render(element)
+</script>
